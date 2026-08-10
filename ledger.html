@@ -147,7 +147,7 @@ p{margin:0;max-width:62ch;text-wrap:pretty}
   background:var(--ink);color:var(--paper);
   border:1px solid var(--ink);border-radius:0;
   -webkit-appearance:none;appearance:none;cursor:pointer;
-  transition:background-color var(--t-fast) var(--ease),color var(--t-fast) var(--ease);
+  transition:background-color var(--t-fast) var(--ease), color var(--t-fast) var(--ease);
 }
 @media(hover:hover){.btn:hover{background:transparent;color:var(--ink)}}
 .btn[aria-busy="true"]{opacity:.55;pointer-events:none}
@@ -157,12 +157,12 @@ p{margin:0;max-width:62ch;text-wrap:pretty}
 header{
   position:fixed;inset:0 0 auto;z-index:60;height:var(--hdr);
   background:var(--paper);border-bottom:1px solid transparent;
-  transition:height var(--t-mid) var(--ease-io),border-color var(--t-mid) var(--ease-io);
+  transition:border-color var(--t-mid) var(--ease-io);
 }
 header.stuck{height:var(--hdr-s);border-bottom-color:var(--rule)}
 .hrow{display:flex;align-items:center;justify-content:space-between;gap:var(--s5);height:100%}
 .brand{display:flex;align-items:center;text-decoration:none;flex-shrink:0}
-.brand svg{height:34px;width:auto;display:block;transition:height var(--t-mid) var(--ease-io)}
+.brand svg{height:34px;width:auto;display:block;transition:none}
 header.stuck .brand svg{height:28px}
 .brand .wm{display:none}
 @media(max-width:600px){
@@ -172,7 +172,7 @@ header.stuck .brand svg{height:28px}
   header.stuck .brand svg{height:26px}
 }
 .hact{display:flex;align-items:center;gap:var(--s6);flex-shrink:0}
-.hact .tel{font-size:18px;display:inline-flex;align-items:center;min-height:44px}
+.hact .tel{font-size:17px;display:inline-flex;align-items:center;min-height:44px}
 .hbox{
   display:inline-flex;align-items:center;height:42px;
   padding:0 22px 0 calc(22px + var(--tr-caps));
@@ -183,7 +183,7 @@ header.stuck .brand svg{height:28px}
 }
 @media(hover:hover){.hbox:hover{background:var(--wash)}}
 @media(max-width:1023px){.hbox{display:none}}
-@media(max-width:389px){.hact .tel{font-size:16px}}
+@media(max-width:389px){.hact .tel{font-size:15px}}
 
 /* ---------- B. HERO. paper, on a drawn column field ---------- */
 .hero{padding-top:var(--s6);padding-bottom:var(--s9);position:relative;overflow:hidden}
@@ -335,7 +335,7 @@ header.stuck .brand svg{height:28px}
   padding-top:var(--s5);display:flex;flex-wrap:wrap;align-items:baseline;
   justify-content:space-between;gap:var(--s3) var(--s5);
 }
-.ledger-end .tel{font-size:22px}
+.ledger-end .tel{font-size:21px}
 
 @media(max-width:1023px){
   .ent{display:block;padding-block:var(--s7)}
@@ -378,7 +378,7 @@ header.stuck .brand svg{height:28px}
   padding-top:var(--s6);display:flex;flex-wrap:wrap;align-items:baseline;
   justify-content:space-between;gap:var(--s3) var(--s5);
 }
-.faq-end .tel{font-size:22px}
+.faq-end .tel{font-size:21px}
 
 /* ---------- the concession. the one navy plane on the page ---------- */
 .concede{background:var(--ink);color:var(--nv-t2);padding-block:var(--s8)}
@@ -400,7 +400,7 @@ header.stuck .brand svg{height:28px}
 /* ---------- forms. one construction, two instances ---------- */
 .f{position:relative;margin-bottom:var(--s5)}
 .f > label{display:block;margin-bottom:var(--s1);
-  font-family:var(--f-b);font-weight:400;font-size:14px;line-height:1.4;
+  font-family:var(--f-b);font-weight:400;font-size:15px;line-height:1.4;
   letter-spacing:.01em;color:var(--ink-2)}
 .f .opt{color:var(--ink-3)}
 .f input,.f select,.f textarea{
@@ -432,12 +432,12 @@ input:-webkit-autofill{-webkit-text-fill-color:var(--ink);
 .consent input{flex:0 0 auto;width:20px;height:20px;margin:2px 0 0;padding:0;
   border:1px solid var(--ink-line);border-radius:0;
   -webkit-appearance:none;appearance:none;background:transparent;cursor:pointer;
-  transition:background-color var(--t-fast) var(--ease),border-color var(--t-fast) var(--ease)}
+  transition:background-color var(--t-fast) var(--ease), border-color var(--t-fast) var(--ease)}
 .consent input:checked{background:var(--ink);border-color:var(--ink);
   background-size:12px;background-position:center;background-repeat:no-repeat;
   background-image:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 12 12'%3E%3Cpath d='M2 6.5l2.5 2.5L10 3' fill='none' stroke='%23F6F4F1' stroke-width='1.5'/%3E%3C/svg%3E")}
 .consent.bad input{border-width:3px}
-.consent label{font-size:14px;line-height:1.55;color:var(--ink-2);cursor:pointer}
+.consent label{font-size:15px;line-height:1.55;color:var(--ink-2);cursor:pointer}
 .fnote{margin-top:var(--s4);font-size:var(--fs-small);letter-spacing:var(--tr-small);color:var(--ink-2);max-width:46ch}
 .sent{display:none}
 .sent.on{display:block}
@@ -480,19 +480,19 @@ footer .brandmark svg{height:38px;width:auto;display:block}
 }
 .callbar.on{transform:none}
 .callbar .eb{color:var(--nv-t3)}
-.callbar .tel{font-size:19px;color:var(--paper)}
+.callbar .tel{font-size:21px;color:var(--paper)}
 @media(max-width:1023px){.callbar{display:flex}}
 
 /* ---------- reveal. desktop only. degrades dim, never gone ---------- */
 @media(min-width:1024px) and (prefers-reduced-motion:no-preference){
   .rv{opacity:.55;transform:translateY(16px);
-    transition:opacity var(--t-slow) linear,transform var(--t-mid) var(--ease)}
+    transition:opacity var(--t-slow) linear, transform var(--t-mid) var(--ease)}
   .rv.in{opacity:1;transform:none}
 }
 @media(prefers-reduced-motion:reduce){*,*::before,*::after{transition:none;animation:none}}
 
 .skip{position:absolute;left:-9999px;top:0;z-index:90;background:var(--ink);color:var(--paper);
-  padding:12px 18px;font-size:14px;text-decoration:none}
+  padding:12px 18px;font-size:15px;text-decoration:none}
 .skip:focus{left:var(--gut);top:8px}
 </style>
 
