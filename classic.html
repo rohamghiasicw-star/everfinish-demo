@@ -95,7 +95,7 @@ h3{font-size:var(--fs-d3);line-height:1.24}
 
 .shell{max-width:var(--shell);margin:0 auto;padding-inline:var(--gut)}
 .sec{padding-block:var(--band)}
-#work,#kitchens,#process,#faq,#estimate,#top{scroll-margin-top:calc(var(--hdr) + 12px)}
+#work,#kitchens,#process,#areas,#faq,#estimate,#top{scroll-margin-top:calc(var(--hdr) + 12px)}
 
 .skip{position:absolute;left:-9999px;top:0;z-index:99;background:var(--navy);color:var(--paper);
   padding:12px 18px;font-family:var(--jost);font-size:var(--fs-cap);text-transform:uppercase;
@@ -485,6 +485,46 @@ footer .brand .wm{display:none}
   .srule{margin-bottom:var(--s6)}
   .est .btn{width:100%}
 }
+
+/* ============================================================
+   N. THE CO PAINTING SHAPE. header nav, areas band, footer sitemap
+   ============================================================ */
+/* the header carries the page the way A's header carries his silo. no chevrons,
+   no panels, no drawer. currentColor so it inverts with .hdr.stuck for free. */
+.hnav{display:none;align-items:center;gap:30px;flex:0 1 auto}
+.hnav a{font-family:var(--jost);font-weight:500;font-size:var(--fs-cap);
+  text-transform:uppercase;letter-spacing:var(--tr-cap);text-decoration:none;
+  color:currentColor;opacity:.82;white-space:nowrap;
+  padding-bottom:3px;border-bottom:1px solid transparent;
+  transition:opacity var(--t-fast) var(--ease), border-color var(--t-fast) var(--ease)}
+.hnav a:hover{opacity:1;border-bottom-color:currentColor}
+@media(min-width:1100px){.hnav{display:flex}}
+@media(min-width:1100px) and (max-width:1279px){.hnav{gap:22px}}
+
+/* the areas band lands the page back on Paper straight out of the navy */
+.acity{border-top:1px solid var(--hair-2)}
+.acity .row{display:grid;grid-template-columns:minmax(0,200px) minmax(0,1fr);
+  gap:0 var(--s6);padding-block:var(--s5);border-bottom:1px solid var(--hair)}
+.acity h3{font-size:1.0625rem;line-height:1.28}
+.acity p{margin-top:0;color:var(--ink-2);font-size:var(--fs-small);line-height:1.66;max-width:56ch}
+@media(max-width:599px){.acity .row{grid-template-columns:1fr;gap:var(--s2)}}
+.anote{margin-top:var(--s6);color:var(--ink-2);font-size:var(--fs-plate);line-height:1.6}
+
+/* the closing NAP, as text, at the point of highest intent */
+.nap{margin-top:var(--s6);padding-top:var(--s5);border-top:1px solid var(--hair-2);
+  font-size:var(--fs-small);line-height:1.7;color:var(--ink-2);max-width:44ch}
+.nap strong{font-weight:600;color:var(--ink)}
+
+/* footer stops being a signature and becomes a footer */
+.fnav{display:grid;gap:9px;align-content:start}
+.fnav .cap{margin-bottom:5px}
+.fnav a{text-decoration:none;color:var(--ink-2);font-size:var(--fs-small);
+  border-bottom:1px solid transparent;transition:color var(--t-fast) var(--ease),
+  border-color var(--t-fast) var(--ease);width:fit-content}
+.fnav a:hover{color:var(--ink);border-bottom-color:var(--hair-2)}
+@media(min-width:860px){.frow{grid-template-columns:auto minmax(0,1fr) auto auto}}
+@media(max-width:1023px){.fnav a{padding-block:7px;margin-block:-7px}}
+.tight{padding-top:0}
 </style>
 
 <a class="skip" href="#main">Skip to content</a>
@@ -506,8 +546,15 @@ footer .brand .wm{display:none}
   <g fill="#16283F"><path d="M185.00 396.00H187.00L503.00 708.00H640.00L296.00 384.00L661.00 0.00H519.00L187.00 366.00H185.00V0.00H86.00V708.00H185.00Z" transform="translate(-370.752,65.136) scale(0.030000,-0.030000)"/><path d="M185.00 0.00H86.00V708.00H185.00Z" transform="translate(-340.118,65.136) scale(0.030000,-0.030000)"/><path d="M334.00 0.00H235.00V621.00H8.00V708.00H561.00V621.00H334.00Z" transform="translate(-321.123,65.136) scale(0.030000,-0.030000)"/><path d="M693.00 110.00Q651.00 53.00 584.00 17.50Q517.00 -18.00 423.00 -18.00Q342.00 -18.00 273.50 9.50Q205.00 37.00 155.50 86.50Q106.00 136.00 78.00 204.50Q50.00 273.00 50.00 355.00Q50.00 438.00 78.50 506.50Q107.00 575.00 157.50 623.50Q208.00 672.00 277.00 699.00Q346.00 726.00 427.00 726.00Q463.00 726.00 500.00 719.00Q537.00 712.00 571.00 698.00Q605.00 684.00 633.00 663.50Q661.00 643.00 681.00 616.00L603.00 556.00Q577.00 592.00 529.50 615.50Q482.00 639.00 427.00 639.00Q365.00 639.00 315.50 616.50Q266.00 594.00 231.00 555.00Q196.00 516.00 177.00 464.50Q158.00 413.00 158.00 355.00Q158.00 295.00 176.50 243.00Q195.00 191.00 229.50 152.50Q264.00 114.00 313.50 92.00Q363.00 70.00 424.00 70.00Q484.00 70.00 533.00 94.00Q582.00 118.00 614.00 164.00Z" transform="translate(-293.189,65.136) scale(0.030000,-0.030000)"/><path d="M86.00 708.00H185.00V412.00H543.00V708.00H643.00V0.00H543.00V324.00H185.00V0.00H86.00Z" transform="translate(-261.084,65.136) scale(0.030000,-0.030000)"/><path d="M185.00 88.00H555.00V0.00H86.00V708.00H540.00V621.00H185.00V409.00H519.00V324.00H185.00Z" transform="translate(-228.350,65.136) scale(0.030000,-0.030000)"/><path d="M585.00 142.00H587.00V708.00H686.00V0.00H561.00L187.00 578.00H185.00V0.00H86.00V708.00H215.00Z" transform="translate(-199.456,65.136) scale(0.030000,-0.030000)"/><path d="M693.00 110.00Q651.00 53.00 584.00 17.50Q517.00 -18.00 423.00 -18.00Q342.00 -18.00 273.50 9.50Q205.00 37.00 155.50 86.50Q106.00 136.00 78.00 204.50Q50.00 273.00 50.00 355.00Q50.00 438.00 78.50 506.50Q107.00 575.00 157.50 623.50Q208.00 672.00 277.00 699.00Q346.00 726.00 427.00 726.00Q463.00 726.00 500.00 719.00Q537.00 712.00 571.00 698.00Q605.00 684.00 633.00 663.50Q661.00 643.00 681.00 616.00L603.00 556.00Q577.00 592.00 529.50 615.50Q482.00 639.00 427.00 639.00Q365.00 639.00 315.50 616.50Q266.00 594.00 231.00 555.00Q196.00 516.00 177.00 464.50Q158.00 413.00 158.00 355.00Q158.00 295.00 176.50 243.00Q195.00 191.00 229.50 152.50Q264.00 114.00 313.50 92.00Q363.00 70.00 424.00 70.00Q484.00 70.00 533.00 94.00Q582.00 118.00 614.00 164.00Z" transform="translate(-147.067,65.136) scale(0.030000,-0.030000)"/><path d="M115.00 0.00H5.00L312.00 708.00H402.00L706.00 0.00H594.00L522.00 174.00H186.00ZM221.00 261.00H486.00L354.00 593.00Z" transform="translate(-114.963,65.136) scale(0.030000,-0.030000)"/><path d="M86.00 708.00H330.00Q370.00 708.00 410.00 699.00Q450.00 690.00 481.50 669.00Q513.00 648.00 532.50 614.00Q552.00 580.00 552.00 529.00Q552.00 470.00 518.00 430.00Q484.00 390.00 428.00 375.00V373.00Q462.00 369.00 491.00 355.50Q520.00 342.00 541.00 320.00Q562.00 298.00 573.50 268.00Q585.00 238.00 585.00 201.00Q585.00 150.00 564.00 112.00Q543.00 74.00 507.00 49.50Q471.00 25.00 422.50 12.50Q374.00 0.00 319.00 0.00H86.00ZM185.00 409.00H314.00Q342.00 409.00 367.50 415.50Q393.00 422.00 412.00 435.50Q431.00 449.00 442.00 469.50Q453.00 490.00 453.00 519.00Q453.00 576.00 411.00 600.50Q369.00 625.00 298.00 625.00H185.00ZM185.00 84.00H309.00Q340.00 84.00 371.50 89.50Q403.00 95.00 428.50 109.00Q454.00 123.00 469.50 146.50Q485.00 170.00 485.00 206.00Q485.00 269.00 442.00 297.00Q399.00 325.00 318.00 325.00H185.00Z" transform="translate(-82.768,65.136) scale(0.030000,-0.030000)"/><path d="M185.00 0.00H86.00V708.00H185.00Z" transform="translate(-52.644,65.136) scale(0.030000,-0.030000)"/><path d="M585.00 142.00H587.00V708.00H686.00V0.00H561.00L187.00 578.00H185.00V0.00H86.00V708.00H215.00Z" transform="translate(-33.649,65.136) scale(0.030000,-0.030000)"/><path d="M185.00 88.00H555.00V0.00H86.00V708.00H540.00V621.00H185.00V409.00H519.00V324.00H185.00Z" transform="translate(0.375,65.136) scale(0.030000,-0.030000)"/><path d="M334.00 0.00H235.00V621.00H8.00V708.00H561.00V621.00H334.00Z" transform="translate(29.269,65.136) scale(0.030000,-0.030000)"/><path d="M185.00 0.00H86.00V708.00H313.00Q364.00 708.00 410.00 697.50Q456.00 687.00 490.50 664.00Q525.00 641.00 545.00 603.50Q565.00 566.00 565.00 512.00Q565.00 434.00 517.00 386.00Q469.00 338.00 393.00 325.00L591.00 0.00H471.00L291.00 315.00H185.00ZM185.00 398.00H299.00Q334.00 398.00 364.00 404.00Q394.00 410.00 416.50 423.50Q439.00 437.00 452.00 458.50Q465.00 480.00 465.00 512.00Q465.00 544.00 452.00 565.50Q439.00 587.00 417.50 600.00Q396.00 613.00 367.00 618.50Q338.00 624.00 306.00 624.00H185.00Z" transform="translate(75.568,65.136) scale(0.030000,-0.030000)"/><path d="M185.00 88.00H555.00V0.00H86.00V708.00H540.00V621.00H185.00V409.00H519.00V324.00H185.00Z" transform="translate(104.853,65.136) scale(0.030000,-0.030000)"/><path d="M185.00 0.00H86.00V708.00H528.00V621.00H185.00V401.00H506.00V316.00H185.00Z" transform="translate(133.747,65.136) scale(0.030000,-0.030000)"/><path d="M185.00 0.00H86.00V708.00H185.00Z" transform="translate(161.651,65.136) scale(0.030000,-0.030000)"/><path d="M585.00 142.00H587.00V708.00H686.00V0.00H561.00L187.00 578.00H185.00V0.00H86.00V708.00H215.00Z" transform="translate(180.646,65.136) scale(0.030000,-0.030000)"/><path d="M185.00 0.00H86.00V708.00H185.00Z" transform="translate(214.670,65.136) scale(0.030000,-0.030000)"/><path d="M438.00 577.00Q417.00 606.00 381.00 624.50Q345.00 643.00 300.00 643.00Q276.00 643.00 251.50 636.50Q227.00 630.00 207.00 615.50Q187.00 601.00 174.50 579.50Q162.00 558.00 162.00 528.00Q162.00 499.00 173.50 479.50Q185.00 460.00 204.50 446.50Q224.00 433.00 250.50 423.50Q277.00 414.00 307.00 404.00Q343.00 393.00 380.00 379.00Q417.00 365.00 447.00 342.00Q477.00 319.00 496.00 284.50Q515.00 250.00 515.00 197.00Q515.00 142.00 494.50 101.50Q474.00 61.00 440.00 34.50Q406.00 8.00 361.50 -5.00Q317.00 -18.00 270.00 -18.00Q203.00 -18.00 140.50 8.00Q78.00 34.00 37.00 85.00L114.00 150.00Q139.00 113.00 181.00 90.00Q223.00 67.00 272.00 67.00Q297.00 67.00 322.00 74.00Q347.00 81.00 367.50 96.00Q388.00 111.00 401.00 133.50Q414.00 156.00 414.00 188.00Q414.00 220.00 400.50 241.50Q387.00 263.00 364.00 278.00Q341.00 293.00 310.50 303.50Q280.00 314.00 246.00 325.00Q212.00 335.00 179.00 349.50Q146.00 364.00 120.00 386.50Q94.00 409.00 78.00 442.00Q62.00 475.00 62.00 524.00Q62.00 577.00 83.50 615.00Q105.00 653.00 139.50 678.00Q174.00 703.00 217.50 714.50Q261.00 726.00 305.00 726.00Q367.00 726.00 421.00 704.00Q475.00 682.00 508.00 645.00Z" transform="translate(233.664,65.136) scale(0.030000,-0.030000)"/><path d="M86.00 708.00H185.00V412.00H543.00V708.00H643.00V0.00H543.00V324.00H185.00V0.00H86.00Z" transform="translate(261.599,65.136) scale(0.030000,-0.030000)"/><path d="M185.00 0.00H86.00V708.00H185.00Z" transform="translate(294.333,65.136) scale(0.030000,-0.030000)"/><path d="M585.00 142.00H587.00V708.00H686.00V0.00H561.00L187.00 578.00H185.00V0.00H86.00V708.00H215.00Z" transform="translate(313.328,65.136) scale(0.030000,-0.030000)"/><path d="M620.00 562.00Q588.00 597.00 538.50 618.00Q489.00 639.00 428.00 639.00Q366.00 639.00 316.00 616.50Q266.00 594.00 231.00 555.00Q196.00 516.00 177.00 464.50Q158.00 413.00 158.00 355.00Q158.00 296.00 177.00 244.00Q196.00 192.00 231.00 153.50Q266.00 115.00 317.00 93.00Q368.00 71.00 431.00 71.00Q481.00 71.00 523.00 80.00Q565.00 89.00 596.00 106.00V303.00H439.00V387.00H694.00V44.00Q638.00 14.00 572.00 -2.00Q506.00 -18.00 428.00 -18.00Q345.00 -18.00 275.50 9.50Q206.00 37.00 156.00 86.50Q106.00 136.00 78.00 204.50Q50.00 273.00 50.00 355.00Q50.00 438.00 78.50 506.50Q107.00 575.00 157.50 623.50Q208.00 672.00 277.00 699.00Q346.00 726.00 427.00 726.00Q512.00 726.00 578.50 701.00Q645.00 676.00 689.00 634.00Z" transform="translate(347.352,65.136) scale(0.030000,-0.030000)"/></g>
 </svg></span>
     </a>
+    <nav class="hnav" aria-label="Sections of this page">
+      <a href="#work">The work</a>
+      <a href="#kitchens">Kitchens</a>
+      <a href="#process">Process</a>
+      <a href="#areas">Areas</a>
+      <a href="#faq">Questions</a>
+    </nav>
     <div class="hend">
-      <a class="tel" href="tel:+14163198444">(416) 319-8444</a>
+      <a class="tel" href="tel:+16477245222">(647) 724-5222</a>
       <a class="hbtn" href="#estimate">Request an estimate</a>
     </div>
   </div>
@@ -531,7 +578,7 @@ footer .brand .wm{display:none}
         <p class="hero-deck">Everfinish refinishes kitchen cabinets. The boxes, the counters and the floor stay where they are.</p>
         <div class="hero-act">
           <a class="hbtn" href="#heroform">Request an estimate</a>
-          <a class="tel" href="tel:+14163198444">(416) 319-8444</a>
+          <a class="tel" href="tel:+16477245222">(647) 724-5222</a>
         </div>
       </div>
 
@@ -561,9 +608,9 @@ footer .brand .wm{display:none}
         </form>
         <div class="sent" id="sent1" role="status" tabindex="-1">
           <p class="sent-t">Received.</p>
-          <p class="sent-d">Everfinish has your number. Text photographs of each run of cabinet to (416) 319-8444 and the written price comes back on those.</p>
+          <p class="sent-d">Everfinish has your number. Text photographs of each run of cabinet to (647) 724-5222 and the written price comes back on those.</p>
         </div>
-        <p class="or">Or call <a class="tel" href="tel:+14163198444">(416) 319-8444</a></p>
+        <p class="or">Or call <a class="tel" href="tel:+16477245222">(647) 724-5222</a></p>
       </div>
 
     </div>
@@ -592,8 +639,12 @@ footer .brand .wm{display:none}
     <div class="shell">
       <div class="srule">
         <span class="cap oh">Before and after</span>
-        <a class="capp tel" href="tel:+14163198444">(416) 319-8444</a>
+        <a class="capp tel" href="tel:+16477245222">(647) 724-5222</a>
       </div>
+
+      <p class="lede">A kitchen gets replaced or it gets refinished. Refinishing keeps the boxes,
+      the counters, the floor and the layout, and changes the finish on the doors, the drawer fronts
+      and the face frames. Everfinish only does the second one, in Vaughan, Richmond Hill and Markham.</p>
 
       <div class="wgrid">
         <div>
@@ -627,11 +678,29 @@ footer .brand .wm{display:none}
       </div>
     </div>
   </section>
-  <section class="sec" id="kitchens" style="padding-top:0">
+  <section class="sec tight" id="kitchens">
     <div class="shell">
       <div class="srule">
         <span class="cap oh">Finished kitchens</span>
         <a class="cap" href="#estimate">Request an estimate</a>
+      </div>
+
+      <div class="wgrid rg-h">
+        <div>
+          <h2 class="oh">What gets refinished, and what does not.</h2>
+          <p class="lede">The scope is the same on every kitchen. It is settled on the estimate
+          before a single door comes off.</p>
+        </div>
+        <dl class="rg">
+          <div class="row"><dt>Refinished</dt>
+            <dd>Doors, drawer fronts, cabinet boxes and face frames.</dd></div>
+          <div class="row"><dt>Left alone</dt>
+            <dd>The counters, the floor, the appliances and the layout.</dd></div>
+          <div class="row"><dt>Colour</dt>
+            <dd>Yours, named on the estimate in writing before anything is sprayed.</dd></div>
+          <div class="row"><dt>Not taken on</dt>
+            <dd>Walls, ceilings, trim and side work. Kitchen cabinets only.</dd></div>
+        </dl>
       </div>
 
       <div class="duo">
@@ -664,7 +733,7 @@ footer .brand .wm{display:none}
     <div class="shell">
       <div class="srule">
         <span class="cap oh">How the work runs</span>
-        <a class="capp tel" href="tel:+14163198444">(416) 319-8444</a>
+        <a class="capp tel" href="tel:+16477245222">(647) 724-5222</a>
       </div>
 
       <h2 class="oh">Five steps, in the order they happen.</h2>
@@ -699,6 +768,37 @@ footer .brand .wm{display:none}
       </div>
 
       <p class="proc-foot">Colour, hardware and the schedule for your kitchen are settled in writing on the estimate, before you commit to anything.</p>
+    </div>
+  </section>
+  <section class="sec" id="areas">
+    <div class="shell">
+      <div class="srule">
+        <span class="cap oh">Where Everfinish works</span>
+        <a class="capp tel" href="tel:+16477245222">(647) 724-5222</a>
+      </div>
+
+      <h2 class="oh">Three cities in York Region.</h2>
+      <p class="lede">Vaughan, Richmond Hill and Markham, Ontario. That is the whole map, and it is
+      deliberate. A kitchen is a two visit job at either end, so the van stays inside three cities
+      instead of covering the GTA.</p>
+
+      <dl class="acity">
+        <div class="row">
+          <dt><h3>Vaughan</h3></dt>
+          <dd><p>Woodbridge, Maple, Thornhill, Concord and Kleinburg.</p></dd>
+        </div>
+        <div class="row">
+          <dt><h3>Richmond Hill</h3></dt>
+          <dd><p>Oak Ridges, Richvale, Langstaff, Bayview Hill and Mill Pond.</p></dd>
+        </div>
+        <div class="row">
+          <dt><h3>Markham</h3></dt>
+          <dd><p>Unionville, Markham Village, Cornell, Berczy Village and Cathedraltown.</p></dd>
+        </div>
+      </dl>
+
+      <p class="anote">If your kitchen sits just outside those three, call and ask.
+      <a class="tel" href="tel:+16477245222">(647) 724-5222</a></p>
     </div>
   </section>
   <section class="sec" id="faq">
@@ -748,19 +848,22 @@ footer .brand .wm{display:none}
     <div class="shell">
       <div class="srule">
         <span class="cap oh">Estimate</span>
-        <a class="capp tel" href="tel:+14163198444">(416) 319-8444</a>
+        <a class="capp tel" href="tel:+16477245222">(647) 724-5222</a>
       </div>
 
       <div class="egrid">
         <div class="ehead">
           <h2 class="oh">Send the photographs. Get the price in writing.</h2>
           <p>A wide shot of each run of cabinet, plus a rough count of doors and drawers. That is enough to price a kitchen in Vaughan, Richmond Hill or Markham without anyone visiting first.</p>
-          <a class="tel" href="tel:+14163198444">(416) 319-8444</a>
+          <a class="tel" href="tel:+16477245222">(647) 724-5222</a>
 
           <div class="conc">
             <span class="cap">Before you spend anything</span>
             <p>Some kitchens should be replaced, not refinished. You hear that from Everfinish before you spend anything.</p>
           </div>
+
+          <p class="nap"><strong>Everfinish</strong><br>Kitchen cabinet refinishing in Vaughan,
+          Richmond Hill and Markham, Ontario.<br>Call <a class="tel" href="tel:+16477245222">(647) 724-5222</a>.</p>
 
           <figure class="efig">
             <div class="well">
@@ -806,11 +909,11 @@ footer .brand .wm{display:none}
               <textarea id="e-notes" name="notes" rows="3" placeholder="Colour you have in mind, condition of the fronts, when you want it done"></textarea>
               <span class="err">Check this field.</span></label>
             <button class="btn" type="submit" style="justify-self:start">Request an estimate</button>
-            <p class="fnote">Wide shots read better than close-ups. Photographs can also go by text to (416) 319-8444.</p>
+            <p class="fnote">Wide shots read better than close-ups. Photographs can also go by text to (647) 724-5222.</p>
           </form>
           <div class="sent" id="sent2" role="status" tabindex="-1">
             <p class="sent-t">Received.</p>
-            <p class="sent-d">Everfinish has your details. Text photographs of each run of cabinet to (416) 319-8444 and the written price comes back on those.</p>
+            <p class="sent-d">Everfinish has your details. Text photographs of each run of cabinet to (647) 724-5222 and the written price comes back on those.</p>
           </div>
         </div>
       </div>
@@ -833,17 +936,26 @@ footer .brand .wm{display:none}
 </svg></span>
       </a>
       <p class="fcity"><strong>Kitchen cabinet refinishing</strong>Vaughan, Richmond Hill and Markham, Ontario</p>
-      <p class="ftel"><a class="tel" href="tel:+14163198444">(416) 319-8444</a></p>
+      <nav class="fnav" aria-label="Sections of this page">
+        <span class="cap">On this page</span>
+        <a href="#work">The work</a>
+        <a href="#kitchens">Finished kitchens</a>
+        <a href="#process">How the work runs</a>
+        <a href="#areas">Where Everfinish works</a>
+        <a href="#faq">Questions</a>
+        <a href="#estimate">Request an estimate</a>
+      </nav>
+      <p class="ftel"><a class="tel" href="tel:+16477245222">(647) 724-5222</a></p>
     </div>
     <div class="fbot">
-      <span class="cap">Everfinish</span>
+      <span class="cap">2026 Everfinish</span>
       <span class="capp">Vaughan / Richmond Hill / Markham</span>
     </div>
   </div>
 </footer>
 
-<a class="callbar" id="cb" href="tel:+14163198444">
-  <span class="cap">Call Everfinish</span><span class="tel">(416) 319-8444</span>
+<a class="callbar" id="cb" href="tel:+16477245222">
+  <span class="cap">Call Everfinish</span><span class="tel">(647) 724-5222</span>
 </a>
 
 <script type="application/ld+json">
@@ -855,7 +967,7 @@ footer .brand .wm{display:none}
       "@id": "#everfinish",
       "name": "Everfinish",
       "description": "Everfinish refinishes kitchen cabinets in Vaughan, Richmond Hill and Markham, Ontario. Doors and drawer fronts come off, the cabinet boxes, counters and floor stay in place, and the price is written down before anything comes off the wall.",
-      "telephone": "+14163198444",
+      "telephone": "+16477245222",
       "areaServed": [
         {"@type": "City", "name": "Vaughan", "containedInPlace": {"@type": "AdministrativeArea", "name": "Ontario"}},
         {"@type": "City", "name": "Richmond Hill", "containedInPlace": {"@type": "AdministrativeArea", "name": "Ontario"}},
